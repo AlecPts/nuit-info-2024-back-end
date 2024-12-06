@@ -1,12 +1,13 @@
-#include <iostream>
-#include <oatpp/Environment.hpp>
+#include "pch.h"
+
+#include "app/BackShotsServer.h"
 
 int main(int argc, char** argv)
 {
     oatpp::Environment::init();
-
-    std::cout << "Hello World !" << std::endl;
-
+    BackShotsServer srv;
+    SPDLOG_INFO("Hello world !");
+    srv.run();
     oatpp::Environment::destroy();
     return 0;
 }
